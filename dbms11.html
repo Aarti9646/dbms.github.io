@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <h1 align="center">MySQL Keys</h1>
+<h3>Primary key</h3>
+<p>MySQL primary key is a single or combination of the field, which is used to identify each record in a table uniquely. If the column contains primary key constraints, then it cannot be null or empty. A table may have duplicate columns, but it can contain only one primary key. It always contains unique value into a column.
+</p>
+<p>For example :</p>
+<pre class="code">
+    CREATE TABLE table_name(  
+    column1 datatype PRIMARY KEY,  
+    column2 datatype,  
+    ...  
+);  
+</pre>
+<h3>Foreign Key</h3>
+<p>The foreign key is used to link one or more than one table together. It is also known as the referencing key. A foreign key matches the primary key field of another table. It means a foreign key field in one table refers to the primary key field of the other table. It identifies each row of another table uniquely that maintains the referential integrity in MySQL.</p>
+<p>Syntax :</p>
+<pre class="code">
+    [CONSTRAINT constraint_name]  
+    FOREIGN KEY [foreign_key_name] (col_name, ...)  
+    REFERENCES parent_tbl_name (col_name,...)  
+    ON DELETE referenceOption  
+    ON UPDATE referenceOption  
+</pre>
+<p>Table Employee :</p>
+<pre class="example">
+    CREATE TABLE employee (  
+  ID INT NOT NULL AUTO_INCREMENT,  
+  Name varchar(40) NOT NULL,  
+  Occupation varchar(40) NOT NULL,  
+  PRIMARY KEY (ID)  
+);  
+</pre>
+<p>Table 2 :</p>
+<pre class="example">
+    CREATE TABLE contact (  
+  ID INT,  
+  employee_Id INT,  
+  employee_Info varchar(50) NOT NULL,  
+  Type varchar(50) NOT NULL,  
+  INDEX par_ind (employee_Id),  
+  CONSTRAINT fk_employee FOREIGN KEY (employee_Id)  
+  REFERENCES employee(ID)  
+  ON DELETE CASCADE  
+  ON UPDATE CASCADE  
+);  
+</pre>
+
+<h3>Unique Key</h3>
+<p>A unique key in MySQL is a single field or combination of fields that ensure all values going to store into the column will be unique. It means a column cannot stores duplicate values. For example, the email addresses and roll numbers of students in the "student_info" table or contact number of employees in the "Employee" table should be unique.</p>
+
+<pre class="example">
+    CREATE TABLE table_name(  
+    column1 datatype,  
+    column2 datatype UNIQUE,  
+    ...  
+);  
+</pre>
+<div class="toggle-page-btns">
+<a href="dbms10.html" class="button">&larr; Previous</a>
+
+</div>
+    </div>
+</div>
+
+</body>
+</html>
