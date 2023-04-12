@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <h1 align="canter">Loops in PL/SQL</h1>
+ <p>The PL/SQL loops are used to repeat the execution of one or more statements for specified number of times. These are also known as iterative control statements.</p>
+
+<h3> Syntax for a basic loop:</h3>
+<pre class="code">
+ LOOP  
+   Sequence of statements;  
+ END LOOP; 
+ </pre> 
+ <h3>Types of PL/SQL Loops</h3>
+ 
+ <ul>
+    <li> Basic Loop / Exit Loop</li>
+ <li> While Loop</li>
+ <li> For Loop</li>
+ <li> Cursor For Loop</li>
+ </ul>
+ <p>For example (PL/SQL Exit Loop) :</p>
+ <pre class="example">
+    DECLARE  
+    i NUMBER := 1;  
+    BEGIN  
+    LOOP  
+    EXIT WHEN i>5;  
+    DBMS_OUTPUT.PUT_LINE(i);  
+    i := i+1;  
+    END LOOP;  
+    END;  
+ </pre>
+ <h3>Output : </h3>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+
+<!-- previous next buttons -->
+<div class="toggle-page-btns">
+<a href="PlorSql3.html" class="button">&larr; Previous</a>
+<a href="PlorSql5.html" class="button">Next &rarr;</a>
+</div>
+    </div>
+</div>
+
+</body>
+</html>

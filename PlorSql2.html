@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+       <h1 align="center">Variables</h1>
+        <p>In PL/SQL, a variable is a meaningful name of a temporary storage location that supports a particular data type in a program. Before using a variable, you need to declare it first in the declaration section of a PL/SQL block.</p>
+       <h3> PL/SQL variables naming rules</h3>
+
+<p>Like other programming languages, a variable in PL/SQL must follow the naming rules as follows:</p>
+<ul>
+<li> The variable name must be less than 31 characters. Try to make it as meaningful as possible within 31 characters.</li>
+<li> The variable name must begin with an ASCII letter. It can be either lowercase or uppercase. Notice that PL/SQL is case-insensitive, which means v_data and V_DATA refer to the same variable.</li>
+<li> Followed by the first character are any number, underscore ( _), and dollar sign ( $) characters. Once again, do not make your variables hard to read and difficult to understand.</li>
+</ul>
+
+
+<h3>PL/SQL Variables Declaration</h3>
+<p>To declare a variable, you use a variable name followed by the data type and terminated by a semicolon (;). You can also explicitly add a length constraint to the data type within parentheses. The following illustrates some examples of declaring variables in a PL/SQL anonymous block:</p>
+<pre class="code">
+    DECLARE
+    v_fname varchar2(20);
+    v_lname varchar2(20);
+    n_salary_id number;
+    d_join_date date;
+ BEGIN
+    NULL;
+ END;
+</pre>
+<h3>Consonants</h3>
+<p>A <strong>constant</strong> holds a value that once declared, does not change in the program. A constant declaration specifies its name, data type, and value, and allocates storage for it. The declaration can also impose the NOT NULL constraint.</p>
+<p><strong>Syntax to declare a constant:</strong>
+
+</p>
+<p>
+    constant_name CONSTANT datatype := VALUE;  </p>
+<pre class="code">
+    pi constant number := 3.141592654;  
+</pre>
+<!-- previous next buttons -->
+<div class="toggle-page-btns">
+<a href="PlorSql.html" class="button">&larr; Previous</a>
+<a href="PlorSql3.html" class="button">Next &rarr;</a>
+</div>
+    </div>
+</div>
+
+</body>
+</html>
